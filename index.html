@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Blacklist</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- FILTER ATAS -->
+  <header class="navbar">
+
+ <div class="logo">
+    <img src="logo.png" alt="De Blacklist Logo">
+    <span>De Blacklist</span>
+ </div>
+
+
+  <div class="search-bar">
+    <input type="text" id="username" placeholder="Cari username akun">
+    
+    <select id="game">
+      <option value="">Semua Game</option>
+      <option value="Roblox">Roblox</option>
+      <option value="Mobile Legends">Mobile Legends</option>
+      <option value="Free Fire">Free Fire</option>
+    </select>
+
+    <button onclick="filterData()">Cari</button>
+  </div>
+</header>
+
+<section class="report-section">
+  <h2>📝 Laporkan Akun Bermasalah</h2>
+  <p>Salin format laporan di bawah ini, isi datanya, lalu kirimkan ke admin.</p>
+  <p>kirimkan juga foto bukti chat kalian terkena scam yang dilakukan oleh penipu.</p>
+
+    <textarea id="reportTemplate" readonly>
+        GAME:
+        USERNAME AKUN:
+        ID AKUN:
+        SCREENSHOT AKUN (URL):
+        NAMA PENJUAL:
+        PLATFORM PENJUAL:
+        HARGA:
+        KONTAK PENJUAL:
+        WAKTU KEJADIAN:
+        INFORMASI TAMBAHAN:
+    </textarea>
+
+  <div class="report-btn">
+    <button onclick="copyReport()">📋 Copy Format</button>
+
+        <a href="https://www.instagram.com/direct/new/" target="_blank">
+            <button class="ig">📩 Instagram</button>
+        </a>
+
+        <a href="https://forms.gle/ISI_DENGAN_LINK_GOOGLE_FORM_KAMU" target="_blank">
+            <button class="gf">📝 Google Form</button>
+    </a>
+</div>
+
+</section>
+  <!-- LIST DATA -->
+  <div class="list-container" id="listData"></div>
+
+  <script src="db.js"></script>
+  <script src="index.js"></script>
+<!------------------------------->
+
+</body>
+</html>
